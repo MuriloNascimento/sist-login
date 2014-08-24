@@ -1,0 +1,12 @@
+*{padding: 0px; margin:0px;}
+body{font-family: "Lucida sans"; background-color: #f1f1f1; }
+
+header > div{width: 400px; height: 100px; margin: 0 auto;}
+header > div > h1{position: relative; top: 35px;}
+
+section {width: 400px; background-color: #E0E0DC; padding: 40px 20px; margin: 0 auto; border-bottom:4px solid black;}
+label{width: 300px ; display: block; font-size: 20px}
+input{width: 200px;  height: 30px; font-size: 20px; border-radius: 4px; padding-left: 20px; border: 0px; background-color: #f1f1f1; margin-left: 10px;}
+input:focus{border-radius: 10px;}
+
+button{width: 150px; height: 40px; margin-top: 20px;}
