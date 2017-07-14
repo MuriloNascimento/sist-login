@@ -1,9 +1,15 @@
 importScripts('https://www.gstatic.com/firebasejs/3.5.2/firebase-app.js');
 importScripts('https://www.gstatic.com/firebasejs/3.5.2/firebase-messaging.js');
 
-firebase.initializeApp({
-  'messagingSenderId': '761472737871'
-});
+var config = {
+    apiKey: "AIzaSyD6bsBSQeJCSXV5wpjOqRzQjAbwfsHuB4k",
+    authDomain: "portal-revendas.firebaseapp.com",
+    databaseURL: "https://portal-revendas.firebaseio.com",
+    projectId: "portal-revendas",
+    storageBucket: "portal-revendas.appspot.com",
+    messagingSenderId: "1010230035914"
+  };
+  firebase.initializeApp(config);
 const messaging = firebase.messaging();
 
 messaging.setBackgroundMessageHandler(function(payload) {
