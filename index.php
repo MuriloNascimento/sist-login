@@ -6,8 +6,7 @@
 		<link rel="stylesheet" type="text/css" href="css/stilo.css">
 		<title>teste de login</title>
 		<link rel="manifest" href="/manifest.json">
-		<script src="https://www.gstatic.com/firebasejs/3.8.0/firebase-app.js"></script>
-		<script src="https://www.gstatic.com/firebasejs/3.8.0/firebase-messaging.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/4.1.3/firebase.js"></script>
 		<script>
 		    // Initialize Firebase
 			
