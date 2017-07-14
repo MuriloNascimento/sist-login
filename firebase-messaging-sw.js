@@ -2,15 +2,14 @@ importScripts('https://www.gstatic.com/firebasejs/3.8.0/firebase-app.js');
 importScripts('https://www.gstatic.com/firebasejs/3.8.0/firebase-messaging.js');
 
 var config = {
-    apiKey: "AIzaSyD6bsBSQeJCSXV5wpjOqRzQjAbwfsHuB4k",
-    authDomain: "portal-revendas.firebaseapp.com",
-    databaseURL: "https://portal-revendas.firebaseio.com",
-    projectId: "portal-revendas",
-    storageBucket: "portal-revendas.appspot.com",
-    messagingSenderId: "1010230035914"
-  };
-  firebase.initializeApp(config);
-const messaging = firebase.messaging();
+    apiKey: "AIzaSyDOhdzJdYkrPz9yw4e694SDq0tRWecbpYc",
+    authDomain: "app-portal-revenda.firebaseapp.com",
+    databaseURL: "https://app-portal-revenda.firebaseio.com",
+    projectId: "app-portal-revenda",
+    storageBucket: "app-portal-revenda.appspot.com",
+    messagingSenderId: "761472737871"
+};
+firebase.initializeApp(config);
 
 messaging.setBackgroundMessageHandler(function(payload) {
   console.log('[firebase-messaging-sw.js] Received background message ', payload);
