@@ -4,14 +4,14 @@ importScripts('https://www.gstatic.com/firebasejs/4.1.1/firebase.js');
 
 
 var config = {
-    apiKey: "<APIKEY>",
-    authDomain: "<PROJECTID>.firebaseapp.com",
-    databaseURL: "https://<DATABASE NAME>.firebaseio.com",
-    projectId: "<PROJECT ID>",
-    storageBucket: "<PROJECT ID>.appspot.com",
-    messagingSenderId: "<SENDER ID>"
-};
-firebase.initializeApp(config);
+                apiKey: "AIzaSyDOhdzJdYkrPz9yw4e694SDq0tRWecbpYc",
+                authDomain: "app-portal-revenda.firebaseapp.com",
+                databaseURL: "https://app-portal-revenda.firebaseio.com",
+                projectId: "app-portal-revenda",
+                storageBucket: "app-portal-revenda.appspot.com",
+                messagingSenderId: "761472737871"
+            };
+            firebase.initializeApp(config);
 const messaging = firebase.messaging();
 
 messaging.setBackgroundMessageHandler(function(payload) {
