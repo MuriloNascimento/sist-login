@@ -47,7 +47,7 @@
 			});
 			    
 			messaging.onMessage(function(payload) {
-			  console.log("Message received. ", payload);alert(payload);
+			  console.log("Message received. ", payload);alert('Você tem uma nova mensagem no chat!');
 			 });
 
 			
