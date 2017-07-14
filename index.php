@@ -47,16 +47,7 @@
 			});
 			    
 			messaging.onMessage(function(payload) {
-			  console.log("Message received. ", payload);
-				var n = new Notification(decodeURIComponent(escape('SóCarrão')), { 
-                                        body: decodeURIComponent(escape('Você tem uma nova mensagem no chat! '+res.id)),
-                                        icon: 'http://vm.dev.socarrao/images/icone-socarrao.gif',
-                                    }); 
-
-                                    n.onclick = function(event) {
-                                      event.preventDefault();
-                                      window.open('http://vm.dev.socarrao/meu-socarrao/chat-resumo');
-                                    }
+			  console.log("Message received. ", payload);alert(payload);
 			 });
 
 			
