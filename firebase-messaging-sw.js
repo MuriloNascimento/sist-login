@@ -4,7 +4,7 @@ importScripts('https://www.gstatic.com/firebasejs/4.1.1/firebase.js');
 
 
 var config = {
-    apiKey: "AIzaSyC8Jb09fVMgUPwhQXZMCB_b0xzC324ogzQ",
+    apiKey: "AIzaSyDOhdzJdYkrPz9yw4e694SDq0tRWecbpYc",
     authDomain: "app-portal-revenda.firebaseapp.com",
     databaseURL: "https://app-portal-revenda.firebaseio.com",
     projectId: "app-portal-revenda",
