@@ -24,4 +24,36 @@
 			</div>
 		</section>
 	</body>
+	
+	
+	<script src="https://www.gstatic.com/firebasejs/4.1.3/firebase.js"></script>
+        <script>
+            // Initialize Firebase
+            var config = {
+                apiKey: "AIzaSyDOhdzJdYkrPz9yw4e694SDq0tRWecbpYc",
+                authDomain: "app-portal-revenda.firebaseapp.com",
+                databaseURL: "https://app-portal-revenda.firebaseio.com",
+                projectId: "app-portal-revenda",
+                storageBucket: "app-portal-revenda.appspot.com",
+                messagingSenderId: "761472737871"
+            };
+            firebase.initializeApp(config);
+
+            const messaging = firebase.messaging();
+
+            messaging.requestPermission().then(function() {
+                console.log('Notification permission granted.');
+                messaging.getToken().then(function(currentToken) {
+                    if (currentToken) {
+                        
+                    } else {
+                        console.log('No Instance ID token available. Request permission to generate one.');
+                    }
+                }).catch(function(err) {
+
+                });
+            }).catch(function(err) {
+                console.log('Unable to get permission to notify.', err);
+            });
+        </script>
 </html>
