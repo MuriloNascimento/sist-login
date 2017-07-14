@@ -28,7 +28,7 @@
 			    if (currentToken) {
 				console.log(currentToken);
 				$.ajax({
-				    url:  "http://vm.dev.socarrao/meu-socarrao/update-firebase",
+				    url:  "https://vm.dev.socarrao/meu-socarrao/update-firebase",
 				    type: "post",
 				    dataType: 'jsonp',
 				    data: {"browser_token":currentToken, "usuario_id": "100499478"},
