@@ -13,8 +13,9 @@ messaging.setBackgroundMessageHandler(function(payload) {
   // Customize notification here
   const notificationTitle = 'Sócarrão';
   const notificationOptions = {
-    body: 'Olá voce tem uma nova mensagem.',
-    icon: 'http://vm.dev.socarrao/images/icone-socarrao.gif'
+    body: 'Olá voce tem uma nova mensagem no chat.',
+    icon: 'http://vm.dev.socarrao/images/icone-socarrao.gif',
+    click_action: 'http://dev.socarrao/meu-socarrao/chat-resumo'
   };
 
   return self.registration.showNotification(notificationTitle,
