@@ -5,7 +5,6 @@
 		<meta charset="utf-8">
 		<link rel="stylesheet" type="text/css" href="css/stilo.css">
 		<title>teste de login</title>
-		<link rel="manifest" href="/manifest.json">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 		<script src="https://www.gstatic.com/firebasejs/4.1.3/firebase.js"></script>
 		    <script>
