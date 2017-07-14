@@ -47,15 +47,17 @@
 			});
 			    
 			messaging.onMessage(function(payload) {
-			  var n = new Notification(decodeURIComponent(escape('SóCarrão')), { 
-				body: decodeURIComponent(escape('Você tem uma nova mensagem no chat!')),
-			    }); 
+			  console.log("Message received. ", payload);
+				var n = new Notification(decodeURIComponent(escape('SóCarrão')), { 
+                                        body: decodeURIComponent(escape('Você tem uma nova mensagem no chat! '+res.id)),
+                                        icon: 'http://vm.dev.socarrao/images/icone-socarrao.gif',
+                                    }); 
 
-			    n.onclick = function(event) {
-			      event.preventDefault();
-			      window.open(window.location.origin +'/meu-socarrao/chat-resumo');
-			    }
-			});
+                                    n.onclick = function(event) {
+                                      event.preventDefault();
+                                      window.open('http://vm.dev.socarrao/meu-socarrao/chat-resumo');
+                                    }
+			 });
 
 			
 		    </script>
