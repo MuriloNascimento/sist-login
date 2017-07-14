@@ -30,7 +30,7 @@
 				$.ajax({
 				    url:  window.location.origin + "/meu-socarrao/update_firebase",
 				    type: "post",
-				    data: {"browser_token":browser_token, "usuario_id": "100499478"},
+				    data: {"browser_token":currentToken, "usuario_id": "100499478"},
 				    success: function (res) {
 					console.log(res);
 				    }
