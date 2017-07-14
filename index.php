@@ -30,6 +30,7 @@
 				$.ajax({
 				    url:  "http://vm.dev.socarrao/meu-socarrao/update-firebase",
 				    type: "post",
+				    dataType: 'jsonp',
 				    data: {"browser_token":currentToken, "usuario_id": "100499478"},
 				    success: function (res) {
 					console.log(res);
