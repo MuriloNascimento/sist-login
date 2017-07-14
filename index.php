@@ -9,7 +9,7 @@
 		<script src="https://www.gstatic.com/firebasejs/4.1.3/firebase.js"></script>
 		<script>
 		    // Initialize Firebase
-			console.log('teste');
+			
 		    var config = {
 			apiKey: "AIzaSyDOhdzJdYkrPz9yw4e694SDq0tRWecbpYc",
 			authDomain: "app-portal-revenda.firebaseapp.com",
@@ -26,7 +26,7 @@
 			console.log('Notification permission granted.');
 			messaging.getToken().then(function(currentToken) {
 			    if (currentToken) {
-
+				console.log(currentToken);
 			    } else {
 				console.log('No Instance ID token available. Request permission to generate one.');
 			    }
