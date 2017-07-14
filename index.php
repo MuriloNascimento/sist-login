@@ -7,44 +7,48 @@
 		<title>teste de login</title>
 		<link rel="manifest" href="/manifest.json">
 		<script src="https://www.gstatic.com/firebasejs/4.1.3/firebase.js"></script>
-		<script>
-		    // Initialize Firebase
-			
-		   var config = {
+		    <script>
+			// Initialize Firebase
+
+		       var config = {
 			apiKey: "AIzaSyDOhdzJdYkrPz9yw4e694SDq0tRWecbpYc",
 			authDomain: "app-portal-revenda.firebaseapp.com",
 			databaseURL: "https://app-portal-revenda.firebaseio.com",
 			projectId: "app-portal-revenda",
 			storageBucket: "app-portal-revenda.appspot.com",
 			messagingSenderId: "761472737871"
-		    };
-		    firebase.initializeApp(config);
-
-		    const messaging = firebase.messaging();
-
-		    messaging.requestPermission().then(function() {
+			};
+			firebase.initializeApp(config);
+			const messaging = firebase.messaging();
+			messaging.requestPermission().then(function() {
 			console.log('Notification permission granted.');
 			messaging.getToken()
 			  .then(function(currentToken) {
 			    if (currentToken) {
-				    console.log(currentToken);
+				console.log(currentToken);
+				$.ajax({
+				    url:  window.location.origin + "/meu-socarrao/update_firebase",
+				    type: "post",
+				    data: {"browser_token":browser_token, "usuario_id": "100499478"},
+				    success: function (res) {
+					console.log(res);
+				    }
+				});
 			    } else {
-			      // Show permission request.
 			      console.log('No Instance ID token available. Request permission to generate one.');
 			    }
 			  })
 			  .catch(function(err) {
 			    console.log('An error occurred while retrieving token. ', err);
 			  });
-		    }).catch(function(err) {
+			}).catch(function(err) {
 			console.log('Unable to get permission to notify.', err);
-		    });
-			
+			});
+
 			messaging.onMessage(function(payload) {
 			  console.log("Message received. ", payload);
-			  // ...
 			});
-		</script>
+		    </script>
 	</head>
 	<body>
 		<header>
