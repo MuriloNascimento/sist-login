@@ -1,80 +1,45 @@
-<!DOCTYPE html>
-
 <html>
 	<head>
-		<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<script>
-  (adsbygoogle = window.adsbygoogle || []).push({
-    google_ad_client: "ca-pub-3585303666732017",
-    enable_page_level_ads: true
-  });
-</script>
-		<meta charset="utf-8">
-		<link rel="stylesheet" type="text/css" href="css/stilo.css">
-		<title>teste de login</title>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-		<script src="https://www.gstatic.com/firebasejs/4.1.3/firebase.js"></script>
-		    <script>
-			// Initialize Firebase
-
-		       var config = {
-			apiKey: "AIzaSyDOhdzJdYkrPz9yw4e694SDq0tRWecbpYc",
-			authDomain: "app-portal-revenda.firebaseapp.com",
-			databaseURL: "https://app-portal-revenda.firebaseio.com",
-			projectId: "app-portal-revenda",
-			storageBucket: "app-portal-revenda.appspot.com",
-			messagingSenderId: "761472737871"
-			};
-			firebase.initializeApp(config);
-			const messaging = firebase.messaging();
-			messaging.requestPermission().then(function() {
-			console.log('Notification permission granted.');
-			messaging.getToken()
-			  .then(function(currentToken) {
-			    if (currentToken) {
-				console.log(currentToken);
-				$.ajax({
-				    url:  "https://vm.dev.socarrao/meu-socarrao/update-firebase",
-				    type: "post",
-				    data: {"browser_token":currentToken, "usuario_id": "100499478"},
-				    success: function (res) {
-					console.log(res);
-				    }
-				});
-			    } else {
-			      console.log('No Instance ID token available. Request permission to generate one.');
-			    }
-			  })
-			  .catch(function(err) {
-			    console.log('An error occurred while retrieving token. ', err);
-			  });
-			}).catch(function(err) {
-			console.log('Unable to get permission to notify.', err);
-			});
-			    
-			messaging.onMessage(function(payload) {
-			  console.log("Message received. ", payload);alert('Você tem uma nova mensagem no chat!');
-			 });
-
-			
-		    </script>
+	<script async="async" src="https://www.googletagservices.com/tag/js/gpt.js">
+	</script>
+	<script>
+	  var googletag = googletag || {};
+	  googletag.cmd = googletag.cmd || [];
+	</script>
+	<script>
+	  googletag.cmd.push(function() {
+	    googletag.pubads().set("adsense_background_color", "FFFFFF");
+	  });
+	</script>
+	<script>
+	  googletag.cmd.push(function() {
+	    googletag.defineSlot("/1234/travel/asia", [728, 90], "div-gpt-ad-123456789-0")
+	      .addService(googletag.pubads())
+	      .setTargeting("interests", ["sports", "music", "movies"]);
+	    googletag.defineSlot("/1234/travel/asia", [[468, 60], [728, 90], [300, 250]], "div-gpt-ad-123456789-1")
+	      .addService(googletag.pubads())
+	      .setTargeting("gender", "male")
+	      .setTargeting("age", "20-30");
+	    googletag.pubads().setTargeting("topic","basketball");
+	    googletag.pubads().enableSingleRequest();
+	    googletag.enableServices();
+	  });
+	</script>
 	</head>
 	<body>
-		<header>
-			<div>
-				<h1>Teste de login</h1>
-			</div>
-		</header>
-		<section>
-			<div>
-				<form action="resultado.php" method="post">
-					<label for="login">Login
-					<input type="text" name="login" id="login" value="" autofcus></label><br>
-					<label for="senha">Senha
-					<input type="password" name="senha" id="senha" value="" maxlength="8"></label><br>
-					<button type="submit" name="logar" id="logar">logar</button>
-				</form>
-			</div>
-		</section>
+	  <div id="div-gpt-ad-123456789-0" style="width: 728px; height: 90px">
+	    <script>
+	      googletag.cmd.push(function() {
+	         googletag.display("div-gpt-ad-123456789-0");
+	      });
+	    </script>
+	  </div>
+	    <div id="div-gpt-ad-123456789-1">
+	    <script>
+	      googletag.cmd.push(function() {
+	         googletag.display("div-gpt-ad-123456789-1");
+	      });
+	    </script>
+	  </div>
 	</body>
-</html>
+	</html>
